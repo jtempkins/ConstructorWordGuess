@@ -5,7 +5,7 @@ function Word(word) {
     this.dashArray = [];
     this.letterArray = []
     for (var i =0; i< word.length; i++) {
-        letterArray.push(new Letter(word[i]));
+        this.letterArray.push(new Letter(word[i]));
     }
 
     this.displayDashes = function(){
@@ -13,11 +13,11 @@ function Word(word) {
         this.dashArray.push("_");
         
     }
-    console.log(dashArray);
+    console.log(this.dashArray);
 
     }
 
-this.userEntry = function(var userSelect){
+this.userEntry = function(userSelect){
     for (var i =0; i< word.length; i++) {
         this.letterArray[i].guess(userSelect);
         
